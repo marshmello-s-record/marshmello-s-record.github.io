@@ -1,0 +1,188 @@
+.post_div {
+  margin-top: 5%;
+  .title_div {
+    text-align: center;
+    .title_ {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .subtitle_ {
+      font-size: 1.2rem;
+    }
+    .date_author {
+      opacity: 0.8;
+    }
+  }
+  .highlight {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: keep-all;
+    font-size: 1.05rem;
+    line-height: 1.5em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
+  h6 {
+    font-size: 1.05rem;
+  }
+  p {
+    margin: 5px 0;
+  }
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.6rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    h4 {
+      font-size: 1.2rem;
+    }
+    h5 {
+      font-size: 1.05rem;
+    }
+    h6 {
+      font-size: 1rem;
+    }
+  }
+
+  sup,
+  sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+  }
+  sub {
+    top: 0.4em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 15px 0 10px 0;
+  }
+  ol,
+  ul {
+    * {
+      font-size: 16px !important;
+    }
+  }
+  ul {
+    list-style-position: outside;
+    list-style-type: none;
+    margin-top: 2px;
+    padding-left: 10px;
+    li {
+      position: relative;
+      margin: 5px auto;
+      padding-left: 30px !important;
+    }
+  }
+  ul li:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    width: 7px;
+    height: 7px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  ol {
+    list-style-type: decimal;
+    margin-left: 10px;
+    padding-left: 30px;
+    li {
+      position: relative;
+      margin: 5px auto;
+    }
+  }
+  a {
+    color: #4f86c6;
+  }
+  img {
+    max-width: 96%;
+    margin: 2%;
+    box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.1);
+    &.width-30 {
+      max-width: 30%;
+      margin: 2% 35%;
+    }
+    &.width-40 {
+      max-width: 40%;
+      margin: 2% 30%;
+    }
+    &.width-50 {
+      max-width: 50%;
+      margin: 2% 25%;
+    }
+    &.width-60 {
+      max-width: 60%;
+      margin: 2% 20%;
+    }
+    &.width-70 {
+      max-width: 70%;
+      margin: 2% 15%;
+    }
+    &.width-80 {
+      max-width: 80%;
+      margin: 2% 10%;
+    }
+  }
+  table {
+    width: 100%;
+    margin: 10px auto;
+    word-wrap: break-word;
+    border-collapse: collapse;
+    padding: auto;
+    thead {
+      background-color: #ced3d638;
+    }
+    td,
+    th {
+      padding: 0.5em 1em;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+  }
+  blockquote {
+    background: #ced3d638;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 10px auto;
+    padding: 8px 20px;
+    * {
+      font-size: 16px;
+    }
+  }
+  .preview {
+    display: none;
+  }
+}

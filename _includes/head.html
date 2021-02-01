@@ -1,0 +1,64 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4YH4X8R26D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-4YH4X8R26D');
+  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <!--Favicon-->
+    <link
+      rel="shortcut icon"
+      href="{{ site.baseurl }}/{{ site.blog_setting.favicon }}"
+      type="image/x-icon"
+    />
+  
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+      integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E"
+      crossorigin="anonymous"
+    />
+  
+    <!-- Spoqa Han Sans -->
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  
+    <!-- OG Tag -->
+    {% if page.title %} {% assign title = site.blog_setting.title | append: " |
+    " | append: page.title %} {% else %} {% assign title =
+    site.blog_setting.title |append: " | " | append:
+    site.blog_setting.description %} {% endif %}
+    <meta name="title" content="{{ title }}" />
+    <meta name="author" content="{{ site.blog_setting.profile.username }}" />
+    <meta name="keywords" content="{{ page.tags | join: ',' }}" />
+    <meta name="description" content="{{ page.subtitle }}" />
+    <meta name="robots" content="index,follow" />
+  
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ page.subtitle }}" />
+    <meta property="og:type" content="website, blog" />
+    <meta
+      property="og:image"
+      content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.blog_setting.profile.image }}{% endif %}"
+    />
+    <meta property="og:site_name" content="{{ site.blog_setting.title }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="google-site-verification" content="jdtGjthtj7UK7fTD1V-T4H06npXTV72l-U63bwKsmtw" />
+  
+    <title>{{ title }}</title>
+  </head>

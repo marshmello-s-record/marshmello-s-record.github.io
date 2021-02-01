@@ -1,0 +1,64 @@
+authors: marshmello
+
+baseurl: /
+url: "https://marshmello-s-record.github.io"
+
+blog_setting:
+  title: marshmello's record
+  description: write anything
+  favicon:
+
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-gist
+
+profile:
+  username: Sangwon Lee
+  description: blah
+  interests: blah
+
+disqus_shortname: "marshmello-s-record-github-io"
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+pagination:
+  enabled: true
+  debug: true
+  collection: "posts"
+  per_page: 5
+  permalink: "/blog/:num/"
+  title: ":title - page :num"
+  limit: 10
+  sort_field: "date"
+  sort_reverse: true
+  category: "posts"
+  tag: ""
+  locale: ""
+  trail:
+    before: 2
+    after: 2
+  extension: html
+  indexpage: "index"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_hightlighter: rouge
+
+highlighter: rouge

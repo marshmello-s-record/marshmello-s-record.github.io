@@ -1,0 +1,14 @@
+---
+layout: page_default
+---
+<div class="post_div">
+    <div class="title_div">
+        <p class="title_">{{ page.title }}</p>
+        <p class="subtitle_">{{ page.subtitle }}</p>
+        <p class="date_author">{{ page.date | date_to_string }} - {{ page.author }}</p>
+    </div>
+    
+    {{ content }}    
+    {% include disqus.html %}
+</div>
+{% include footer.html %}
