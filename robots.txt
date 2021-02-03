@@ -1,0 +1,4 @@
+User-agent: *
+Allow:/
+
+Sitempa: https://marshmello-s-record.github.io/sitemap.xml
