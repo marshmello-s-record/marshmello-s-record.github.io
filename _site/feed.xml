@@ -1,17 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-04T14:35:33+09:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2021/02/01/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-02-01T01:43:01+09:00</published><updated>2021-02-01T01:43:01+09:00</updated><id>http://localhost:4000/jekyll/update/2021/02/01/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2021/02/01/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-05T01:00:27+09:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Generative Adversarial Networks(GAN)</title><link href="http://localhost:4000/2021/02/05/inu_paper.html" rel="alternate" type="text/html" title="Generative Adversarial Networks(GAN)" /><published>2021-02-05T00:00:00+09:00</published><updated>2021-02-05T00:00:00+09:00</updated><id>http://localhost:4000/2021/02/05/inu_paper</id><content type="html" xml:base="http://localhost:4000/2021/02/05/inu_paper.html">&lt;h1 id=&quot;generative-adversarial-networks&quot;&gt;Generative Adversarial Networks&lt;/h1&gt;
 
-&lt;p&gt;Jekyll requires blog post files dfdsfsfto be named according to the following format:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/inu_paper/structure.png&quot; alt=&quot;/assets/img/post/inu_paper/structure.png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;GAN은 두 가지의 모델을 적대적(Adversarial)으로 경쟁을 시키면서 발전시키는 것이다.&lt;/li&gt;
+  &lt;li&gt;Generator는 그럴듯한 가짜 이미지를 생성하여 Discriminator를 속이는 것이다.&lt;/li&gt;
+  &lt;li&gt;Discriminator는 Generator가 생성한 가짜 이미지와 진짜 이미지를 구분하는 것이다.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;이미지 출처:&lt;a href=&quot;https://developers.google.com/machine-learning/gan/gan_structure&quot;&gt;developers&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;train&quot;&gt;Train&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;objective-function&quot;&gt;Objective function&lt;/h3&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;\begin{align}
+minmax{(_{\theta{_g}}, _{\theta{_d}})} = [E{_{x} \sim P{_{data}}} \log D{_{\theta}{_d}} (x) + E{_{z} \sim p{_{z}}} \log (1 - D{_{\theta}{_d}} (G{_{\theta}{_g}} (z))) ]
+\end{align}&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gradient ascent on discriminator&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;판별자는 $\theta_d$를 최대화 하는 방향으로 학습을 진행한다.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;\begin{align}
+max{(_{\theta{_d}})} = [E{_{x} \sim P{_{data}}} \log D{_{\theta}{_d}} (x) + E{_{z} \sim p{_{z}}} \log (1 - D{_{\theta}{_d}} (G{_{\theta}{_g}} (z))) ]
+\end{align}&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gradient descent on generator&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;생성자는 $\theta_g$를 최소화 하는 방향으로 학습을 진행한다.&lt;/p&gt;
+
+        &lt;p&gt;\begin{align}
+min{_{\theta}{_g}}E{_{z} \sim p{_{z}}} \log (1 - D{_{\theta}{_d}} (G{_{\theta}{_g}} (z))) ]
+\end{align}&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;gan-구현tensorflow&quot;&gt;GAN 구현(Tensorflow)&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GAN을 tensorflow를 사용하여 구현하였다.&lt;/li&gt;
+  &lt;li&gt;전체 코드는 &lt;a href=&quot;https://github.com/Marshmellowon/Mnist_GAN/blob/master/GAN_mnist_LSW.ipynb&quot;&gt;여기&lt;/a&gt;에서 볼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;generator&quot;&gt;Generator&lt;/h3&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/8a5e9b35a17752d4fe64308a209be7a9.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fully connected layer인 Dense layer를 사용하였고 activation function은 relu를 사용하였다.&lt;/li&gt;
+  &lt;li&gt;마지막 layer에서는 sigmoid를 사용하였고 출력의 크기를 조절해 줬다.&lt;/li&gt;
+  &lt;li&gt;마지막 layer에서 tanh 함수를 사용하였을때는 학습이 잘 이뤄지지 않았다. 범위가 0부터 1인 sigmoid 함수를 사용하니 학습이 잘 이뤄졌다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;discriminator&quot;&gt;Discriminator&lt;/h3&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f733ce6049818a9f5f7f0f3e15985530.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;입력되는 이미지의 크기를 정해주었다.&lt;/li&gt;
+  &lt;li&gt;각 layer마다 LeakyReLU 함수를 사용하였다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;loss&quot;&gt;Loss&lt;/h3&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2ee8c47c70e882c8b69fbc14619257ab.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;loss 함수는 Binary cross entropy를 사용하였다. 판별자가 출력한 loss가 정답에 가까우면 낮아지고 정답에서 멀면 커진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;optimizer&quot;&gt;Optimizer&lt;/h3&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/4060b82b591fb30294d80c679c9ec038.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;optimizer는 생성자는 Adam을 사용하고, 판별자는 RMSProp을 사용하였다.&lt;/li&gt;
+  &lt;li&gt;생성자와 판별자 모두 Adam을 사용했을때는 loss도 커지고 이미지 생성이 제대로 이뤄지지 않았다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;train-1&quot;&gt;Train&lt;/h3&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ae8da42b3f8b25e8dd4fd6f1458b5086.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Generator loss와 Discriminator loss를 계산한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/inu_paper/gnerate36.png&quot; alt=&quot;/assets/img/post/inu_paper/gnerate36.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Generator가 학습을 한 후 36번째 생성한 이미지이다. 완벽하진 않지만 50번 학습중 가장 잘 생성되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;references&quot;&gt;References&lt;/h5&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://dreamgonfly.github.io/blog/gan-explained/&quot;&gt;쉽게 씌어진 GAN&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://jaejunyoo.blogspot.com/2017/01/generative-adversarial-nets-1.html&quot;&gt;Jaejun Yoo’s Playgraound&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>marshmello</name></author><summary type="html">Generative Adversarial Networks</summary></entry></feed>
