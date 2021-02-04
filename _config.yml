@@ -8,6 +8,8 @@ blog_setting:
   description: write anything
   favicon:
 
+google_analytics: G-QCQ9Q0E779
+
 plugins:
   - jekyll-paginate-v2
   - jekyll-gist
