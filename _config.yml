@@ -1,12 +1,13 @@
 authors: marshmello
 
-baseurl: /
 url: "https://marshmello-s-record.github.io"
+baseurl: /
 
 blog_setting:
   title: marshmello's record
   description: write anything
   favicon:
+  url: "https://marshmello-s-record.github.io"
 
 google_analytics: G-QCQ9Q0E779
 

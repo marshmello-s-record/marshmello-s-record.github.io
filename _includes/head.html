@@ -46,10 +46,10 @@
     <meta property="og:type" content="website, blog" />
     <meta
       property="og:image"
-      content="{{ site.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.blog_setting.profile.image }}{% endif %}"
+      content="{{ site.blog_setting.url }}/{% if page.image %}{{ page.image }}{% else %}{{ site.blog_setting.profile.image }}{% endif %}"
     />
     <meta property="og:site_name" content="{{ site.blog_setting.title }}" />
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:url" content="{{ site.blog_setting.url }}{{ page.url }}" />
     <meta name="google-site-verification" content="jdtGjthtj7UK7fTD1V-T4H06npXTV72l-U63bwKsmtw" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
